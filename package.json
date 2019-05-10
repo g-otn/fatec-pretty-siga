@@ -1,0 +1,16 @@
+{
+  "name": "siga-bonito",
+  "version": "1.0.0",
+  "description": "Serves website with information from Centro Paula Souza's SIGA for students",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "fatec-api": "^1.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "g-otn",
+  "license": "ISC",
+  "devDependencies": {}
+}

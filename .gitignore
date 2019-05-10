@@ -1,0 +1,4 @@
+﻿/node_modules/*
+
+# Contém arquivos de teste de saída da fatec-api
+/api-test/*
