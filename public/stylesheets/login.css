@@ -1,0 +1,32 @@
+#areaLogin {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 15px;
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px grey;
+    font-family: m
+}
+
+#formLogin input, #formLogin button {
+    font-size: 14pt;
+    border-radius: 15px;
+    width: 100%;
+    border: 0;
+    box-shadow: 0 0 3px lightblue;
+    padding: 5px 15px 5px;
+    box-sizing: border-box;
+}
+
+#areaLogin input {
+    margin-bottom: 5px;
+}
+
+#formLogin button:hover {
+    background-color: rgb(225,255,255);
+}

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 24pt;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
