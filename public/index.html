@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="stylesheets/login.css">
 </head>
 <body>
-    <div id="areaLogin">
+    <div id="divLogin">
         <h1>Login</h1>
         <form id="formLogin" onsubmit="event.preventDefault(); realizarlogin()">
             <input type="text" name="usuario" placeholder="Usuário" required>
             <br><input type="password" name="senha" placeholder="Senha" required>
             <br><button type="submit">Login</button>
         </form>
+        <pre id="preErroLogin"></pre>
     </div>
 </body>
 </html>

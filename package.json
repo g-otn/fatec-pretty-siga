@@ -1,15 +1,27 @@
 {
-  "name": "siga-cps-bonito",
+  "name": "fatec-siga-bonito",
   "version": "1.0.0",
-  "description": "Website with information from Centro Paula Souza's SIGA for students",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.16.4",
-    "fatec-api": "^1.3.2"
+  "description": "Serves website with student's information from Centro Paula Souza's SIGA",
+  "keywords": [
+    "fatec",
+    "siga"
+  ],
+  "homepage": "https://github.com/g-otn/fatec-siga-bonito",
+  "bugs": {
+    "url": "https://github.com/g-otn/fatec-siga-bonito/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g-otn/fatec-siga-bonito.git"
+  },
+  "license": "BSD-2-Clause",
+  "author": "Gabriel Otani Pereira",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "author": "g-otn",
-  "license": ""
+  "dependencies": {
+    "express": "^4.16.4",
+    "fatec-api": "^1.3.2"
+  }
 }
