@@ -1,18 +1,18 @@
 {
-  "name": "fatec-siga-bonito",
+  "name": "fatec-pretty-siga",
   "version": "1.0.0",
   "description": "Serves website with student's information from Centro Paula Souza's SIGA",
   "keywords": [
     "fatec",
     "siga"
   ],
-  "homepage": "https://github.com/g-otn/fatec-siga-bonito",
+  "homepage": "https://github.com/g-otn/fatec-pretty-siga",
   "bugs": {
-    "url": "https://github.com/g-otn/fatec-siga-bonito/issues"
+    "url": "https://github.com/g-otn/fatec-pretty-siga/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/g-otn/fatec-siga-bonito.git"
+    "url": "https://github.com/g-otn/fatec-pretty-siga.git"
   },
   "license": "BSD-2-Clause",
   "author": "Gabriel Otani Pereira",

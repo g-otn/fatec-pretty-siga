@@ -1,59 +1,61 @@
 function realizarlogin() {
+    // Limpa a mensagem de erro
+    document.getElementById('preErroLogin').innerText = ''
+
+    // Tenta criar a chamada Ajax
     let req = new XMLHttpRequest() || new ActiveXObject()
     if (req == undefined) {
         mostrarErroDeLogin('Não é possível se conectar utilizando o seu navegador.')
         return
     }
 
+    // Resgata dados
     let formLogin = document.forms['formLogin']
     let usuario = formLogin.children[0].value
     let senha = formLogin.children[2].value
+
     // Segunda validação de dados (inputs não vazios)
     if (!usuario || !senha) {
         mostrarErroDeLogin('Usuário e senha não preenchidos')
         return
     }
 
-    // Configura callbacks e a requisição e envia os dados de login
-    req.onprogress = (e) => console.log(e)
-    req.onload = () => verificarLogin(req)
+    // Desabilita botão de login
+    formLogin.children[4].disabled = true
+
+    // Configura callbacks e realiza a requisição
+    req.onload = () => verificarLogin(req.response, usuario, senha)
     req.onerror = () => mostrarErroDeLogin('A conexão com o servidor falhou')
-    req.open('POST', 'http://localhost/login')
+    req.open('POST', '/login')
     req.setRequestHeader('Content-type', 'application/json')
     req.send(JSON.stringify({ usuario: usuario, senha: senha }))
 }
 
-function verificarLogin(req) {
-    if (req.status !== 200) {
-        mostrarErroDeLogin(`Ocorreu um erro: ${req.statusText} (${req.status})`)
-        return
-    }
-
-    let res
+function verificarLogin(resposta, usuario, senha) {
     try {
-        res = JSON.parse(req.response)
+        resposta = JSON.parse(resposta)
     } catch {
         mostrarErroDeLogin('Dados inválidos recebidos, impossível fazer login')
         return
     }
-    console.log(res)
 
     // Verificação de login bem-sucedido
-    if (!res.autenticado) {
-        mostrarErroDeLogin(res.erro)
+    if (!resposta.autenticado) {
+        mostrarErroDeLogin(resposta.erro)
+
+        // Reabilita botão de login
+        document.forms['formLogin'].children[4].disabled = false
         return
     }
-
-    // Atribui os dados resgatados
 
     // Pede confirmação ao atualizar ou sair da página
     window.onbeforeunload = () => { return 'Ao reiniciar ou fechar a página será preciso realizar o login novamente'}
 
-    // document.body = null
+    // Atribui os dados resgatados
+    getDados(usuario, senha)
 }
 
 function mostrarErroDeLogin(erro) {
-
     let preErroLogin = document.getElementById('preErroLogin')
-    preErroLogin.innerText = erro
+    preErroLogin.innerText = erro ? erro : 'Erro desconhecido'
 }
