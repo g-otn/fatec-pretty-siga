@@ -51,8 +51,11 @@ function verificarLogin(resposta, usuario, senha) {
     // Pede confirmação ao atualizar ou sair da página
     window.onbeforeunload = () => { return 'Ao reiniciar ou fechar a página será preciso realizar o login novamente'}
 
-    // Atribui os dados resgatados
+    // Resgata e reserva os dados resgatados
     getDados(usuario, senha)
+
+    // Carrega a página principal
+    carregarPaginas()
 }
 
 function mostrarErroDeLogin(erro) {

@@ -1,39 +1,41 @@
+/* Container do "body" da página de login */
 #divPaginaLogin {
+    position: absolute;
     margin: 5%;
-    padding: 20px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px lightgray;
-}
-
-#divLoginContainer {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
-    /* width: 100%;
-    height: 100%;
-    background-color: rgba(200, 200, 200, 0.5); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Cabeçalho e Subtítulo da página */
+/* #divPaginaLogin header {
+
+} */
+
+
+/* Formulário de Login */
 #divLogin {
+    vertical-align: middle;
+    display: inline-block;
     background-color: white;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
     border-radius: 15px;
     padding: 20px;
     box-shadow: 5px 5px 10px lightgray;
     max-width: 260px;
 }
 
-#divLogin h1 {
+#divLogin h2 {
     margin-top: 0;
     margin-bottom: 15px;
 }
 
 #divLogin pre {
-    font-size: 10pt;
+    font-family: 'Roboto', sans-serif;
     color: rgb(255, 100, 100);
     margin-bottom: 0;
     white-space: pre-wrap;
@@ -76,8 +78,23 @@
     color: grey;
 }
 
+/* Descrição */
+#divDescricao {
+    text-align: center;
+    padding: 10px;
+}
+
+#divDescricao p {
+    display: inline-block;
+    max-width: 600px;
+}
+
+/* Footer */
+#divPaginaLogin footer {
+    margin-top: 16px;
+}
+
 #divPaginaLogin footer p {
-    margin-bottom: 0;
     text-align: center;
     font-size: 9pt;
 }

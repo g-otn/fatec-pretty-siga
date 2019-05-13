@@ -3,11 +3,11 @@ var app = express()
 var siga = require('./siga.js')
 
 // Permite ler dados que foram recebidos em formato json
-app.use(express.json({ limit: '78b' })) // 78 bytes: usuario e senha com 20 caracteres cada e tipoDado, tudo em formato JSON em string
-// Serve arquivos estáticos de /public na raiz
+app.use(express.json({ limit: '120b' })) // 120 bytes: suficiente para todas as requisições
+// Serve os arquivos estáticos de /public na raiz
 app.use(express.static('public'))
 
-// Trata chamadas xhr POST em /login, usado por /public/scripts/login.js para autenticação do aluno
+// Captura xhr POST enviado por /public/scripts/login.js para autenticação do aluno
 app.post('/login', (req, res) => {
     // Terceira validação de dados
     if (!req.body.usuario || !req.body.senha || !req.body.usuario.length > 20 || !req.body.senha.length > 20) {
@@ -15,12 +15,14 @@ app.post('/login', (req, res) => {
         return
     }
 
+    // Responde se foi possível se autenticar com o usuário e senha da requisição
     siga.tentarLogin(req.body.usuario, req.body.senha)
         .then(resposta => res.send(resposta))
 })
 
-// Trata chamadas xhr POST em /dados, usado por /public/scripts/dados.js para requisitar dados do aluno
+// Captura xhr POST enviado por /public/scripts/dados.js para requisitar dados do aluno
 app.post('/dados', (req, res) => {
+    // Responde com dados do aluno autenticado com o usuário e senha da requisição
     siga.getDados(req.body.usuario, req.body.senha, req.body.tipoDado)
         .then(resposta => res.send(resposta))
 })
@@ -28,7 +30,7 @@ app.post('/dados', (req, res) => {
 // Redireciona para raiz se nenhum tratamento respondeu ao chamado (ex: GET uma página invalída)
 app.use((req, res) => res.redirect('/'))
 
-// Inicia o servidor na porta HTTP
-app.listen(80, () => {
-    console.log('Express escutando na porta 80')
+// "Inicia" o servidor
+app.listen(process.env.PORT, () => {
+    console.log('Express escutando na porta ' + process.env.PORT)
 })
