@@ -21,6 +21,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "fatec-api": "^1.3.2"
   }

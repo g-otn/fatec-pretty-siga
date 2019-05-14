@@ -24,41 +24,34 @@ function realizarlogin() {
     formLogin.children[4].disabled = true
 
     // Configura callbacks e realiza a requisição
-    req.onload = () => verificarLogin(req.response, usuario, senha)
+    req.onload = () => { console.log(req); verificarLogin(req.response) }
     req.onerror = () => mostrarErroDeLogin('A conexão com o servidor falhou')
-    req.open('POST', '/login')
+    req.open('POST', '/')
     req.setRequestHeader('Content-type', 'application/json')
     req.send(JSON.stringify({ usuario: usuario, senha: senha }))
 }
 
-function verificarLogin(resposta, usuario, senha) {
+function verificarLogin(resposta) {
+    // Verifica se a resposta está em JSON (stringfy-ed) ou HTML
     try {
-        resposta = JSON.parse(resposta)
-    } catch {
-        mostrarErroDeLogin('Dados inválidos recebidos, impossível fazer login')
-        return
-    }
-
-    // Verificação de login bem-sucedido
-    if (!resposta.autenticado) {
+        // Se a resposta está JSON, ela contém um atributo erro
+        resposta = JSON.parse(resposta) // Deve dar erro aqui
         mostrarErroDeLogin(resposta.erro)
+    } catch {
+        // Se não está em JSON, a reposta é um HTML
 
-        // Reabilita botão de login
-        document.forms['formLogin'].children[4].disabled = false
-        return
+        // Pede confirmação ao atualizar ou sair da página
+        window.onbeforeunload = () => { return '' }
+
+        document.body.innerHTML = resposta
     }
 
-    // Pede confirmação ao atualizar ou sair da página
-    window.onbeforeunload = () => { return 'Ao reiniciar ou fechar a página será preciso realizar o login novamente'}
 
-    // Resgata e reserva os dados resgatados
-    getDados(usuario, senha)
-
-    // Carrega a página principal
-    carregarPaginas()
+    console.log('resposta:\n', resposta)
 }
 
 function mostrarErroDeLogin(erro) {
     let preErroLogin = document.getElementById('preErroLogin')
     preErroLogin.innerText = erro ? erro : 'Erro desconhecido'
+    formLogin.children[4].disabled = false
 }

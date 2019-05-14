@@ -36,10 +36,16 @@
 
 #divLogin pre {
     font-family: 'Roboto', sans-serif;
+    font-size: 11pt;
     color: rgb(255, 100, 100);
     margin-bottom: 0;
     white-space: pre-wrap;
 }
+
+#divLogin pre:empty {
+    margin-top: 0;
+}
+
 
 #formLogin input, #formLogin button {
     font-size: 14pt;
@@ -74,7 +80,7 @@
 
 #formLogin button:disabled{
     background-color: lightgrey;
-    cursor: not-allowed;
+    cursor: progress;
     color: grey;
 }
 
