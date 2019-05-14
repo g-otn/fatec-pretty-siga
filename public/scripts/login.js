@@ -20,8 +20,9 @@ function realizarlogin() {
         return
     }
 
-    // Desabilita botão de login
+    // Modificação na página para indicar o processo
     formLogin.children[4].disabled = true
+    document.body.style.cursor = 'progress'
 
     // Configura callbacks e realiza a requisição
     req.onload = () => { console.log(req); verificarLogin(req.response) }
@@ -43,15 +44,14 @@ function verificarLogin(resposta) {
         // Pede confirmação ao atualizar ou sair da página
         window.onbeforeunload = () => { return '' }
 
+        // Substitui todo o corpo atual (página de login) pelo o recebido
         document.body.innerHTML = resposta
     }
-
-
-    console.log('resposta:\n', resposta)
 }
 
 function mostrarErroDeLogin(erro) {
     let preErroLogin = document.getElementById('preErroLogin')
     preErroLogin.innerText = erro ? erro : 'Erro desconhecido'
+    document.body.style.cursor = 'default'
     formLogin.children[4].disabled = false
 }

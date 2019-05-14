@@ -77,20 +77,23 @@
 #formLogin button:active {
     background-color: white;
 }
+#formLogin button:not(:disabled) {
+    cursor: default;
+}
 
-#formLogin button:disabled{
+#formLogin button:disabled {
     background-color: lightgrey;
-    cursor: progress;
+    cursor: not-allowed;
     color: grey;
 }
 
 /* Descrição */
-#divDescricao {
+#divLoginDescricao {
     text-align: center;
     padding: 10px;
 }
 
-#divDescricao p {
+#divLoginDescricao p {
     display: inline-block;
     max-width: 600px;
 }

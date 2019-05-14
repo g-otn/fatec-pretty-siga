@@ -17,14 +17,16 @@ app.post('/', (req, res) => {
         return
     }
 
-    siga.login(req.body.usuario, req.body.senha)
-        .then(aluno => {
-            if (aluno.erro !== undefined) {
-                console.log(aluno)
-                res.send(aluno)
+    require('./api-test/mockSiga.js').login // para teste, retorna dados de aluno já salvos em arquivo local
+    //siga.login
+    (req.body.usuario, req.body.senha)
+        .then(dadosAluno => {
+            if (dadosAluno.erro !== undefined) {
+                res.send(dadosAluno)
             }
             else
-                res.render('main', { teste: 'aa' }, (erro, html) => {
+                res.render('main', dadosAluno, (erro, html) => {
+                    
                     if (erro)
                         res.send({ erro: 'Não foi possível gerar sua página de aluno' })
                     else
