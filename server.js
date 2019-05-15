@@ -25,9 +25,10 @@ app.post('/', (req, res) => {
                 res.send(dadosAluno)
             else {
                 res.render('main', dadosAluno, (erro, html) => {
-                    if (erro) 
+                    if (erro) {
+                        console.log(erro)
                         res.send({ erro: 'Não foi possível gerar sua página de aluno' })
-                    else
+                    } else
                         res.send(html)
                 })
             }

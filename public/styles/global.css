@@ -28,7 +28,13 @@ a:hover {
     color: green;
 }
 
-/* Para teste */
-* {
-    border: 1px dotted grey;
+li {
+    transition: background-color .2s ease-in;
+    -moz-transition: background-color .2s ease-in;
+    -webkit-transition: background-color .2s ease-in;
 }
+
+/* Para teste */
+    /* * {
+        border: 1px dashed rgb(58, 58, 58);
+    } */

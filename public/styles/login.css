@@ -45,7 +45,6 @@
     margin-bottom: 0;
     white-space: pre-wrap;
     height: auto;
-    -o-transition: all .1s ease;
     -webkit-transition: all .1s ease;
     -moz-transition: all .1s ease;
     transition: all .1s ease;
@@ -121,7 +120,6 @@
 #divPaginaLogin footer a {
     white-space: nowrap;
     margin: 0 1vw 0;
-    -o-transition: font-size .1s ease;
     -webkit-transition: font-size .1s ease;
     -moz-transition: font-size .1s ease;
     transition: font-size .1s ease;

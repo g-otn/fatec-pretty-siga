@@ -1,58 +1,79 @@
 #header {
-    display: block;
-    overflow: auto;
-    background-color: lightseagreen;
-    padding: 15px;
+    background-color: #cf1812;
+    width: 100%;
 }
 
-#divMenu {
-    display: block;
-    top: 0;
+nav {
+    position: sticky;
 }
 
-#divMenu ul {
-    position: absolute;
-    margin: 0;
-    padding: 0;
+#menu {
+    display: table;
+    position: sticky;
+    overflow: visible;
+    text-align: center;
+
+    width: 80%;
     list-style: none;
+    padding: 0;
 }
 
 .menuItem {
-    float: left;
-    background-color: rgb(184, 217, 231)/*#a3130d*/;
-    padding: 10px 20px;
-    width: 115px;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    
+    width: 125px;
+    height: 35px;
+
+    background-color: #cf1812;
+    color: white;
+    padding: 10px 15px;
     text-align: center;
-    -o-transition: background-color .2s ease-in-out;
-    -webkit-transition: background-color .2s ease-in-out;
-    -moz-transition: background-color .2s ease-in-out;
-    transition: background-color .2s ease-in-out;
 }
 
 .menuItem:hover {
     color: white;
-    background-color: #1ac/*#a3130d*/;
+    background-color: #a3130d;
 }
 
 .subMenu {
+    display: none;
+    position: absolute;
 
+    list-style: none;
+    padding: 0;
 }
 
 .menuItem:hover .subMenu {
-
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: auto;
 }
 
 .subMenuItem {
-    display: none;
-    border: 1px dashed aquamarine;
+    display: block;
+    text-align: left;
+    background-color: #ce3732;
+    padding: 5px 10px;
+
+    height: 1px;
+    transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
 }
 
 .menuItem:hover .subMenuItem {
-
+    height: 25px;
 }
 
 .subMenuItem:hover {
-    color: red;
+    background-color: rgb(63, 63, 63);
+}
+
+.menuItem:active, .subMenuItem:active {
+    background-color: #c74d48;
 }
 
 #divInfo {
@@ -60,17 +81,19 @@
 }
 
 /* Imagem do Aluno */
-#divInfoImgAluno {
+#imgAluno {
+    margin: 5px;
     float: right;
     border-radius: 50px;
     width: 60px;
     height: 60px;
     overflow: hidden;
+
     text-align: center;
     background-color: white;
 }
 
-#divInfoImgAluno img {
+#imgAluno img {
     width: 50px;
     height: 66px;
 }
