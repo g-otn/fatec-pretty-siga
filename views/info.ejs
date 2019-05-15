@@ -1,3 +1,8 @@
-<img src="<%= perfil.picture %>">
-<pre>
-</pre>
+<div id="divInfoImgAluno">
+    <img src="<%= perfil.picture %>">
+</div>
+<br>
+<span>
+    Progresso <%= Math.round(perfil.progress) %>%
+    Média Acumulada <%= perfil.averageGrade %>
+</span>

@@ -27,3 +27,8 @@ a {
 a:hover {
     color: green;
 }
+
+/* Para teste */
+* {
+    border: 1px dotted grey;
+}

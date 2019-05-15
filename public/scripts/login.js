@@ -25,7 +25,7 @@ function realizarlogin() {
     document.body.style.cursor = 'progress'
 
     // Configura callbacks e realiza a requisição
-    req.onload = () => { console.log(req); verificarLogin(req.response) }
+    req.onload = () => verificarLogin(req.response)
     req.onerror = () => mostrarErroDeLogin('A conexão com o servidor falhou')
     req.open('POST', '/')
     req.setRequestHeader('Content-type', 'application/json')
@@ -42,16 +42,18 @@ function verificarLogin(resposta) {
         // Se não está em JSON, a reposta é um HTML
 
         // Pede confirmação ao atualizar ou sair da página
-        window.onbeforeunload = () => { return '' }
+        //window.onbeforeunload = () => { return '' }
 
         // Substitui todo o corpo atual (página de login) pelo o recebido
         document.body.innerHTML = resposta
+        
+        document.body.style.cursor = 'default'
     }
 }
 
 function mostrarErroDeLogin(erro) {
     let preErroLogin = document.getElementById('preErroLogin')
     preErroLogin.innerText = erro ? erro : 'Erro desconhecido'
-    document.body.style.cursor = 'default'
     formLogin.children[4].disabled = false
+    document.body.style.cursor = 'default'
 }

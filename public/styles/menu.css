@@ -1,0 +1,76 @@
+#header {
+    display: block;
+    overflow: auto;
+    background-color: lightseagreen;
+    padding: 15px;
+}
+
+#divMenu {
+    display: block;
+    top: 0;
+}
+
+#divMenu ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menuItem {
+    float: left;
+    background-color: rgb(184, 217, 231)/*#a3130d*/;
+    padding: 10px 20px;
+    width: 115px;
+    text-align: center;
+    -o-transition: background-color .2s ease-in-out;
+    -webkit-transition: background-color .2s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
+}
+
+.menuItem:hover {
+    color: white;
+    background-color: #1ac/*#a3130d*/;
+}
+
+.subMenu {
+
+}
+
+.menuItem:hover .subMenu {
+
+}
+
+.subMenuItem {
+    display: none;
+    border: 1px dashed aquamarine;
+}
+
+.menuItem:hover .subMenuItem {
+
+}
+
+.subMenuItem:hover {
+    color: red;
+}
+
+#divInfo {
+    border: 1px solid blueviolet;
+}
+
+/* Imagem do Aluno */
+#divInfoImgAluno {
+    float: right;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+}
+
+#divInfoImgAluno img {
+    width: 50px;
+    height: 66px;
+}

@@ -1,23 +1,28 @@
-<ul>
-    <li id="" class="">Perfil
-        <pre><%= JSON.stringify(perfil, null, '  ') %><pre>
+<ul id="menu">
+    <li class="menuItem" onclick="mostrarDiv('divPerfil')">
+    Perfil
     </li>
-    <li id="" class="">Notas Parciais
-        <pre><%= JSON.stringify(notasParciais, null, '  ') %><pre>
+    <li class="menuItem" onclick="mostrarDiv('divNotasParciais')">
+    Notas Parciais
     </li>
-    <li id="" class="">Disciplinas
-        <pre><%= JSON.stringify(disciplinas, null, '  ') %><pre>
+    <li class="menuItem" onclick="mostrarDiv('divDisciplinas')">
+        Disciplinas
+        <ul class="subMenu">
+            <% disciplinas.forEach(disciplina => { %>
+                <li class="subMenuItem"><%= disciplina.name %></li>
+            <% }) %>
+        </ul>
     </li>
-    <li id="" class="">Horários
-        <pre><%= JSON.stringify(horarios, null, '  ') %><pre>
+    <li class="menuItem" onclick="mostrarDiv('divHorarios')">
+    Horários
     </li>
-    <li id="" class="">Histórico
-        <pre><%= JSON.stringify(historico, null, '  ') %><pre>
+    <li class="menuItem" onclick="mostrarDiv('divHistorico')">
+    Histórico
     </li>
-    <li id="" class="">Grade Escolar
-        <pre><%= JSON.stringify(gradeEscolar, null, '  ') %><pre>
+    <li class="menuItem" onclick="mostrarDiv('divGradeEscolar')">
+    Grade Escolar
     </li>
-    <li id="" class="">Calendário
-        <pre><%= JSON.stringify(calendario, null, '  ') %><pre>
+    <li class="menuItem" onclick="mostrarDiv('divCalendario')"
+    >Calendário
     </li>
 </ul>

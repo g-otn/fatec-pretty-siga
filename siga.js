@@ -3,13 +3,16 @@ const fatecApi = require('fatec-api')
 exports.login = async (usuario, senha) => {
     let resposta = {}
     let conta = new fatecApi.Account(usuario, senha)
+    
     // Tentar logar
     await conta.login()
         .catch(erro => resposta.erro = erro.toString()) // Se não conseguir logar, retorna o erro
+
     // Se logar, resgata os dados do aluno
     if (conta.isLogged())
         await getDadosAluno(conta)
             .then(dadosAluno => resposta = dadosAluno)
+
     return resposta
 }
 

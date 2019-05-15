@@ -17,6 +17,11 @@
 
 } */
 
+/* Container Formulário de Login */
+/* #divLoginContainer {
+    min-height: 250px;
+} */
+
 
 /* Formulário de Login */
 #divLogin {
@@ -26,7 +31,6 @@
     border-radius: 15px;
     padding: 20px;
     box-shadow: 5px 5px 10px lightgray;
-    max-width: 260px;
 }
 
 #divLogin h2 {
@@ -40,6 +44,11 @@
     color: rgb(255, 100, 100);
     margin-bottom: 0;
     white-space: pre-wrap;
+    height: auto;
+    -o-transition: all .1s ease;
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    transition: all .1s ease;
 }
 
 #divLogin pre:empty {
@@ -101,9 +110,23 @@
 /* Footer */
 #divPaginaLogin footer {
     margin-top: 16px;
+    min-height: 59px;
 }
 
 #divPaginaLogin footer p {
     text-align: center;
     font-size: 9pt;
+}
+
+#divPaginaLogin footer a {
+    white-space: nowrap;
+    margin: 0 1vw 0;
+    -o-transition: font-size .1s ease;
+    -webkit-transition: font-size .1s ease;
+    -moz-transition: font-size .1s ease;
+    transition: font-size .1s ease;
+}
+
+#divPaginaLogin footer a:hover {
+    font-size: 12pt;
 }
