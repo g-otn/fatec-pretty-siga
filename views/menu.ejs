@@ -1,26 +1,35 @@
 <nav>
+    <div id="resumoAluno">
+        <h4><%= perfil.name.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %>
+        </h4>
+        <div id="resumoAlunoImgAlunoContainer">
+            <img src="<%= perfil.picture %>">
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>PP <%= Math.round(perfil.progress) %>%</td>
+                    <td>PR <%= perfil.averageGrade %></td>
+                </tr>
+                <tr>
+                    <td colspan="2">RA: <%= perfil.code %></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <span>
+    </span> -->
+    </div>
     <ul id="menu">
         <li class="menuItem" onclick="mostrarDiv('divPerfil')">Perfil</li>
         <li class="menuItem" onclick="mostrarDiv('divNotasParciais')">Notas Parciais</li>
-        <li class="menuItem" onclick="mostrarDiv('divDisciplinas')">Disciplinas
-            <ul class="subMenu">
-                <% disciplinas.forEach(disciplina => { %>
-                <li class="subMenuItem"><%= disciplina.name %></li>
-                <% }) %>
-            </ul>
-        </li>
+        <li class="menuItem" onclick="mostrarDiv('divDisciplinas')">Disciplinas</li>
         <li class="menuItem" onclick="mostrarDiv('divHorarios')">Horários</li>
         <li class="menuItem" onclick="mostrarDiv('divHistorico')">Histórico</li>
         <li class="menuItem" onclick="mostrarDiv('divGradeEscolar')">Grade Escolar</li>
-        <li class="menuItem" onclick="mostrarDiv('divCalendario')">Calendário</li>
     </ul>
+    <ul>
+        <li>Sair</li>
+    </ul>
+    <img class="svg" src="media/icon_arrow_left.png">
 </nav>
-        <li id="imgAluno">
-            <img src="<%= perfil.picture %>">
-        </li>
-<!--
-<span>
-    Progresso <%= Math.round(perfil.progress) %>%
-    Média Acumulada <%= perfil.averageGrade %>
-</span>
--->

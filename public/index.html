@@ -22,29 +22,27 @@
 </head>
 
 <body>
-    <div id="divPaginaLogin">
+    <div id="paginaLogin">
         <header>
             <h1>Fatec Pretty SIGA</h1>
             <p>Visualize suas informações de aluno do SIGA do Centro Paula Souza de uma maneira agradável!</p>
         </header>
-        <div id="divLoginContainer">
-            <div id="divLogin">
+        <div id="loginContainer">
+            <div id="login">
                 <h2>Login</h2>
-                <form id="formLogin" autocomplete="on" onsubmit="event.preventDefault(); realizarlogin()">
+                <form id="login" autocomplete="on" onsubmit="event.preventDefault(); realizarlogin()">
                     <input type="text" name="usuario" maxlength="20" size="20" autocomplete="username"
                         placeholder="Usuário" required oninput="this.value = this.value.toUpperCase()">
                     <br><input type="password" name="senha" maxlength="20" size="20" autocomplete="current-password"
                         placeholder="Senha" required>
                     <br><button type="submit">Confirmar</button>
                 </form>
-                <pre id="preErroLogin"></pre>
+                <pre id="erroLogin"></pre>
             </div>
         </div>
-        <div id="divLoginDescricao">
+        <div id="loginDescricao">
             <p>
-                O Fatec Pretty SIGA busca suas informações de aluno no SIGA e as organiza em um site bonito e fácil de
-                usar
-            </p>
+                O Fatec Pretty SIGA organiza suas informações de aluno no SIGA em um estilo mais agradável</p>
             <br>
             <p style="text-align: left; font-size: 0.8em">
                 Esse site foi desenvolvido para funcionar apenas com o SIGA do Centro Paula Souza.

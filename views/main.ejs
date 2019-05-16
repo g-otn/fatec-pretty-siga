@@ -1,4 +1,11 @@
-<header id="header">
-    <% include menu.ejs %>
-</header>
-<h4><%= perfil.unit %></h4>
+<% include menu.ejs %>
+<div id="abas">
+</div>
+<div style='margin: 100px; border: 2px dashed black; height: 700px;'>
+    <pre>
+        <%= JSON.stringify(perfil, null, '  ') %>
+    </pre>
+</div> 
+<footer>
+    <h4><%= perfil.unit %></h4>
+</footer>

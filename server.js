@@ -17,8 +17,8 @@ app.post('/', (req, res) => {
         return
     }
 
-    require('./api-test/mockSiga.js').login // para teste, retorna dados de aluno já salvos em arquivo local
-    //siga.login
+    //require('./api-test/mockSiga.js').login // para teste, retorna dados de aluno já salvos em arquivo local
+    siga.login
         (req.body.usuario, req.body.senha)
         .then(dadosAluno => {
             if (dadosAluno.erro !== undefined)
@@ -27,7 +27,7 @@ app.post('/', (req, res) => {
                 res.render('main', dadosAluno, (erro, html) => {
                     if (erro) {
                         console.log(erro)
-                        res.send({ erro: 'Não foi possível gerar sua página de aluno' })
+                        res.send({ erro: 'Ocorreu um erro no servidor e não foi possível gerar sua página de aluno' })
                     } else
                         res.send(html)
                 })

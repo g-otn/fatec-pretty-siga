@@ -1,5 +1,5 @@
 /* Container do "body" da página de login */
-#divPaginaLogin {
+div#paginaLogin {
     position: absolute;
     margin: 5%;
     top: 0;
@@ -13,49 +13,50 @@
 }
 
 /* Cabeçalho e Subtítulo da página */
-/* #divPaginaLogin header {
+/* div#PaginaLogin header {
 
 } */
 
 /* Container Formulário de Login */
-/* #divLoginContainer {
+/* div#LoginContainer {
     min-height: 250px;
 } */
 
 
 /* Formulário de Login */
-#divLogin {
+div#login {
     vertical-align: middle;
     display: inline-block;
     background-color: white;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 5px 5px 10px lightgray;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
 }
 
-#divLogin h2 {
+div#login h2 {
     margin-top: 0;
     margin-bottom: 15px;
 }
 
-#divLogin pre {
+pre#erroLogin {
     font-family: 'Roboto', sans-serif;
     font-size: 11pt;
     color: rgb(255, 100, 100);
     margin-bottom: 0;
     white-space: pre-wrap;
-    height: auto;
-    -webkit-transition: all .1s ease;
-    -moz-transition: all .1s ease;
-    transition: all .1s ease;
+    max-width: 300px;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
 }
 
-#divLogin pre:empty {
+pre#erroLogin:empty {
     margin-top: 0;
 }
 
 
-#formLogin input, #formLogin button {
+form#login input, form#login button {
     font-size: 14pt;
     border-radius: 15px;
     border: 0;
@@ -65,66 +66,69 @@
     width: 100%;
 }
 
-#formLogin button {
+form#login button {
     margin-top: 15px;
     width: 100%;
 }
 
-#formLogin input {
+form#login input {
     margin-bottom: 5px;
 }
 
-#formLogin input:focus {
+form#login input:focus {
     box-shadow: 0 0 3px lightseagreen;
 }
 
-#formLogin button:hover {
+form#login button:hover {
     color: lightseagreen;
 }
 
-#formLogin button:active {
+form#login button:active {
     background-color: white;
 }
-#formLogin button:not(:disabled) {
+form#login button:not(:disabled) {
     cursor: default;
 }
 
-#formLogin button:disabled {
+form#login button:disabled {
     background-color: lightgrey;
     cursor: not-allowed;
     color: grey;
 }
 
+
 /* Descrição */
-#divLoginDescricao {
+div#loginDescricao {
     text-align: center;
     padding: 10px;
 }
 
-#divLoginDescricao p {
+div#loginDescricao p {
     display: inline-block;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 /* Footer */
-#divPaginaLogin footer {
+div#paginaLogin footer {
     margin-top: 16px;
     min-height: 59px;
 }
 
-#divPaginaLogin footer p {
+div#paginaLogin footer p {
     text-align: center;
     font-size: 9pt;
 }
 
-#divPaginaLogin footer a {
+div#paginaLogin footer a {
     white-space: nowrap;
     margin: 0 1vw 0;
     -webkit-transition: font-size .1s ease;
     -moz-transition: font-size .1s ease;
+    -ms-transition: font-size .1s ease;
+    -o-transition: font-size .1s ease;
     transition: font-size .1s ease;
 }
 
-#divPaginaLogin footer a:hover {
+div#paginaLogin footer a:hover {
     font-size: 12pt;
 }

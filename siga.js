@@ -3,7 +3,7 @@ const fatecApi = require('fatec-api')
 exports.login = async (usuario, senha) => {
     let resposta = {}
     let conta = new fatecApi.Account(usuario, senha)
-    
+
     // Tentar logar
     await conta.login()
         .catch(erro => resposta.erro = erro.toString()) // Se não conseguir logar, retorna o erro
@@ -18,14 +18,14 @@ exports.login = async (usuario, senha) => {
 
 async function getDadosAluno(conta) {
     let dadosAluno = {}
+
     await Promise.all([
         conta.getProfile(),             // resposta[0]
         conta.getPartialGrades(),       // resposta[1]
         conta.getEnrolledDisciplines(), // resposta[2]
         conta.getSchedules(),           // resposta[3]
         conta.getHistory(),             // resposta[4]
-        conta.getSchoolGrade(),         // resposta[5]
-        conta.getAcademicCalendar()     // resposta[6]
+        conta.getSchoolGrade()          // resposta[5]
     ])
         .then(resposta => {
             dadosAluno.perfil = resposta[0]
@@ -34,7 +34,6 @@ async function getDadosAluno(conta) {
             dadosAluno.horarios = resposta[3]
             dadosAluno.historico = resposta[4]
             dadosAluno.gradeEscolar = resposta[5]
-            dadosAluno.calendario = resposta[6]
         })
         .catch(erro => dadosAluno = { erro: erro.toString() })
     return dadosAluno

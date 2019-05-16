@@ -1,6 +1,6 @@
 function realizarlogin() {
     // Limpa a mensagem de erro
-    document.getElementById('preErroLogin').innerText = ''
+    document.getElementById('erroLogin').innerText = ''
 
     // Tenta criar a chamada Ajax
     let req = new XMLHttpRequest() || new ActiveXObject()
@@ -10,7 +10,7 @@ function realizarlogin() {
     }
 
     // Resgata dados
-    let formLogin = document.forms['formLogin']
+    let formLogin = document.forms['login']
     let usuario = formLogin.children[0].value
     let senha = formLogin.children[2].value
 
@@ -52,8 +52,9 @@ function verificarLogin(resposta) {
 }
 
 function mostrarErroDeLogin(erro) {
-    let preErroLogin = document.getElementById('preErroLogin')
+    let preErroLogin = document.getElementById('erroLogin')
     preErroLogin.innerText = erro ? erro : 'Erro desconhecido'
+    let formLogin = document.forms['login']
     formLogin.children[4].disabled = false
     document.body.style.cursor = 'default'
 }

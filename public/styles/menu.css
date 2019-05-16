@@ -1,99 +1,119 @@
 #header {
-    background-color: #cf1812;
     width: 100%;
 }
 
+/* Barra lateral */
+
 nav {
-    position: sticky;
-}
-
-#menu {
-    display: table;
-    position: sticky;
-    overflow: visible;
-    text-align: center;
-
-    width: 80%;
-    list-style: none;
-    padding: 0;
-}
-
-.menuItem {
-    display: table-cell;
-    vertical-align: middle;
-    position: relative;
-    
-    width: 125px;
-    height: 35px;
-
-    background-color: #cf1812;
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
-}
-
-.menuItem:hover {
     color: white;
     background-color: #a3130d;
-}
-
-.subMenu {
-    display: none;
-    position: absolute;
-
-    list-style: none;
-    padding: 0;
-}
-
-.menuItem:hover .subMenu {
-    display: inline-block;
+    position: fixed;
     top: 0;
-    left: 0;
-    height: auto;
+    left: -220px;
+    width: 210px;
+    height: 100vh;
+    border-left: 10px solid #680d0a;
+    border-right: 42px solid #680d0a;
+    -webkit-transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
+    -moz-transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
+    -ms-transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
+    -o-transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
+    transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
 }
 
-.subMenuItem {
-    display: block;
-    text-align: left;
-    background-color: #ce3732;
-    padding: 5px 10px;
-
-    height: 1px;
-    transition: all .2s ease-in;
-    -moz-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
+nav:hover {
+    left: 0px;
 }
 
-.menuItem:hover .subMenuItem {
-    height: 25px;
+/* SVG botão menu */
+
+nav img.svg {
+    position: absolute;
+    top: 50%;
+    right: -37px;
+    transform: translateY(-16px) rotateY(180deg);
 }
 
-.subMenuItem:hover {
-    background-color: rgb(63, 63, 63);
-}
-
-.menuItem:active, .subMenuItem:active {
-    background-color: #c74d48;
-}
-
-#divInfo {
-    border: 1px solid blueviolet;
+nav:hover img.svg {
+    transform: translateY(-16px) rotateY(0deg);
 }
 
 /* Imagem do Aluno */
-#imgAluno {
-    margin: 5px;
-    float: right;
-    border-radius: 50px;
-    width: 60px;
-    height: 60px;
-    overflow: hidden;
 
+div#resumoAluno {
+    padding: 15px;
     text-align: center;
-    background-color: white;
 }
 
-#imgAluno img {
-    width: 50px;
-    height: 66px;
+div#resumoAluno h4 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+div#resumoAlunoImgAlunoContainer {
+    display: inline-block;
+    border-radius: 85px;
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+div#resumoAlunoImgAlunoContainer img {
+    width: 130px;
+    height: 173px;
+}
+
+div#resumoAluno table {
+    width: 100%;
+}
+
+
+
+/* Menu de opções */
+
+ul#menu {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    /* Permite dar scroll sem aparecer a barra */
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+ul#menu::-webkit-scrollbar {
+    /* Permite dar scroll sem aparecer a barra */
+    display: none;
+}
+
+ul#menu li {
+    background-color: #a3130d;
+    padding: 10px 15px;
+    -webkit-transition: background-color .2s ease;
+    -moz-transition: background-color .2s ease;
+    -ms-transition: background-color .2s ease;
+    -o-transition: background-color .2s ease;
+    transition: background-color .2s ease;
+}
+
+ul#menu li:hover {
+    color: white;
+    background-color: #680d0a;
+}
+
+ul#menu li:active {
+    background-color: #c74d48;
 }
