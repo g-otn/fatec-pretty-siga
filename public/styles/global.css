@@ -30,13 +30,6 @@ a:hover {
 
 
 
-/* SVGs color */
-
-path, img {
-    fill: white;
-}
-
-
 /* Barra de rolamento personalizada (Chrome) */
 
 ::-webkit-scrollbar {
@@ -58,11 +51,16 @@ path, img {
 
 
 
-/* SVGs */
+/* Ícones */
 
-img.svg {
-    filter: invert(1); /* SVGs preto para branco */
+img.icon {
+    filter: invert(1); /* Preto para branco */
 }
+
+/* SVGs */
+/* path {
+    fill: white;
+} */
 
 
 
