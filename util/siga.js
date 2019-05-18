@@ -28,12 +28,12 @@ async function getDadosAluno(conta) {
         conta.getSchoolGrade()          // resposta[5]
     ])
         .then(resposta => {
-            dadosAluno.perfil = resposta[0]
-            dadosAluno.notasParciais = resposta[1]
-            dadosAluno.disciplinas = resposta[2]
-            dadosAluno.horarios = resposta[3]
-            dadosAluno.historico = resposta[4]
-            dadosAluno.gradeEscolar = resposta[5]
+            dadosAluno.perfil =         resposta[0]
+            dadosAluno.notasParciais =  resposta[1]
+            dadosAluno.disciplinas =    resposta[2]
+            dadosAluno.horarios =       resposta[3]
+            dadosAluno.historico =      resposta[4]
+            dadosAluno.gradeEscolar =   resposta[5]
         })
         .catch(erro => dadosAluno = { erro: erro.toString() })
     return dadosAluno

@@ -5,6 +5,8 @@
 /* Barra lateral */
 
 nav {
+    display: flex;
+    flex-direction: column;
     color: white;
     background-color: #a3130d;
     position: fixed;
@@ -53,8 +55,8 @@ div#resumoAluno h4 {
 div#resumoAlunoImgAlunoContainer {
     display: inline-block;
     border-radius: 85px;
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
     text-align: center;
     background-color: white;
@@ -62,8 +64,8 @@ div#resumoAlunoImgAlunoContainer {
 }
 
 div#resumoAlunoImgAlunoContainer img {
-    width: 130px;
-    height: 173px;
+    width: 120px;
+    height: 160px;
 }
 
 div#resumoAluno table {
@@ -77,8 +79,6 @@ div#resumoAluno table {
 ul#menu {
     width: 100%;
     height: 100%;
-    list-style: none;
-    padding: 0;
     margin: 0;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -86,20 +86,37 @@ ul#menu {
     -o-user-select: none;
     user-select: none;
 
-    /* Permite dar scroll sem aparecer a barra */
-    overflow-y: scroll;
-    -ms-overflow-style: none;
+    /* Permite dar scroll */
     overflow: scroll;
     overflow-x: hidden;
+    overflow-y: scroll;
+    /* Desaparece a barra de scroll */
+    -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
 ul#menu::-webkit-scrollbar {
-    /* Permite dar scroll sem aparecer a barra */
-    display: none;
+    /* Desaparece a barra de scroll */
+    display: none; /* Chrome */
 }
 
-ul#menu li {
+ul#menu:hover {
+    /* Mostra a barra de scroll */
+    -ms-overflow-style: auto;
+    scrollbar-width: thin;
+}
+
+ul#menu::-webkit-scrollbar:hover {
+    /* Mostra a barra de scroll */
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
     background-color: #a3130d;
     padding: 10px 15px;
     -webkit-transition: background-color .2s ease;
@@ -109,11 +126,11 @@ ul#menu li {
     transition: background-color .2s ease;
 }
 
-ul#menu li:hover {
+nav li:hover {
     color: white;
     background-color: #680d0a;
 }
 
-ul#menu li:active {
+nav li:active {
     background-color: #c74d48;
 }

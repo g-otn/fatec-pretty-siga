@@ -10,6 +10,7 @@ div#paginaLogin {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 /* Cabeçalho e Subtítulo da página */
@@ -99,7 +100,6 @@ form#login button:disabled {
 
 /* Descrição */
 div#loginDescricao {
-    text-align: center;
     padding: 10px;
 }
 
@@ -107,6 +107,7 @@ div#loginDescricao p {
     display: inline-block;
     max-width: 700px;
 }
+
 
 /* Footer */
 div#paginaLogin footer {

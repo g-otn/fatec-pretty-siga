@@ -1,4 +1,4 @@
 ﻿/node_modules/*
 
 # Arquivos de teste local da fatec-api
-/api-test/*
+tests/*

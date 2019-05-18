@@ -1,11 +1,19 @@
+<!-- Estilos -->
+<link rel="stylesheet" href="styles/menu.css">
+<link rel="stylesheet" href="styles/abas/calendario.css">
+<link rel="stylesheet" href="styles/abas/grade.css">
+<link rel="stylesheet" href="styles/abas/historico.css">
+<link rel="stylesheet" href="styles/abas/notas.css">
+<link rel="stylesheet" href="styles/abas/perfil.css">
+
 <% include menu.ejs %>
 <div id="abas">
+    <div style='margin: 100px; border: 2px dashed black; height: 700px;'>
+        <pre>
+            <%= JSON.stringify(perfil, null, '  ') %>
+        </pre>
+    </div> 
 </div>
-<div style='margin: 100px; border: 2px dashed black; height: 700px;'>
-    <pre>
-        <%= JSON.stringify(perfil, null, '  ') %>
-    </pre>
-</div> 
 <footer>
     <h4><%= perfil.unit %></h4>
 </footer>

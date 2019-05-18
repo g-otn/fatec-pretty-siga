@@ -16,13 +16,11 @@
   },
   "license": "BSD-2-Clause",
   "author": "Gabriel Otani Pereira",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
+  "main": "app.js",
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "fatec-api": "^1.3.2"
+    "fatec-api": "^1.3.2",
+    "simple-jscalendar": "^1.4.4"
   }
 }
