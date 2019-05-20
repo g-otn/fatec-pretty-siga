@@ -1,4 +1,4 @@
-<!-- Estilos -->
+<!-- Estilos da página do aluno -->
 <link rel="stylesheet" href="styles/menu.css">
 <link rel="stylesheet" href="styles/abas/calendario.css">
 <link rel="stylesheet" href="styles/abas/grade.css">
@@ -6,13 +6,27 @@
 <link rel="stylesheet" href="styles/abas/notas.css">
 <link rel="stylesheet" href="styles/abas/perfil.css">
 
-<% include menu.ejs %>
+<!-- Corpo da página do aluno -->
+<% include menu %>
 <div id="abas">
-    <div style='margin: 100px; border: 2px dashed black; height: 700px;'>
-        <pre>
-            <%= JSON.stringify(perfil, null, '  ') %>
-        </pre>
-    </div> 
+    <div id="divPerfil">
+        <% include abas/perfil %>
+    </div>
+    <div id="divNotasParciais">
+        <% include abas/notas %>
+    </div>
+    <div id="divDisciplinas">
+        <% include abas/disciplinas %>
+    </div>
+    <div id="divHorarios">
+        <% include abas/horarios %>
+    </div>
+    <div id="divHistorico">
+        <% include abas/historico %>
+    </div>
+    <div id="divGradeEscolar">
+        <% include abas/grade %>
+    </div>
 </div>
 <footer>
     <h4><%= perfil.unit %></h4>
