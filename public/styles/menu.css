@@ -52,6 +52,16 @@ nav:hover img#menuIconeSeta {
     transform: translateY(-16px) rotateY(0deg);
 }
 
+nav img#menuIconeFixar {
+    position: absolute;
+    top: 2%;
+    right: -37px;
+}
+
+nav img#menuIconeFixar:hover {
+    background-color: rgba(255,255,255,.2);
+}
+
 
 
 /* Imagem do Aluno */
