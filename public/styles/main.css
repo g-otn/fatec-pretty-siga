@@ -3,6 +3,7 @@
 div#abas {
     height: 100vh;
     margin-left: 42px;
+    overflow-x: scroll;
     -webkit-transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
     -moz-transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
     -ms-transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
