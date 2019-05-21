@@ -10,8 +10,8 @@ div#abas {
     transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
 }
 
-nav:hover + div#abas {
-    margin-left: 262px; /* 220px (nav content) + 42px (nav border-right) */
+nav:hover + div#abas, nav.fixo + div#abas { /* Previne div#abas de voltar para a esquerda */
+    margin-left: 252px; /* 210px (nav content) + 42px (nav border-right) */
 }
 
 div#abas div {
@@ -32,7 +32,7 @@ div#abas div {
 }
 
 ::-webkit-scrollbar-track {
-    background: #a7403d3b;
+    background: #a7403d7a;
 }
 
 ::-webkit-scrollbar-thumb {

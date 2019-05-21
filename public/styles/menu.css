@@ -13,10 +13,9 @@ nav {
     background-color: #a3130d;
     position: fixed;
     top: 0;
-    left: -220px;
+    left: -210px;
     width: 210px;
     height: 100vh;
-    border-left: 10px solid #680d0a;
     border-right: 42px solid #680d0a;
     -webkit-transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
     -moz-transition: all .3s cubic-bezier(.24, 1.04, .63, .94);
@@ -37,6 +36,10 @@ nav ul {
     user-select: none;
 }
 
+nav.fixo {
+    left: 0px;
+}
+
 
 
 /* Icones menu */
@@ -55,11 +58,18 @@ nav:hover img#menuIconeSeta {
 nav img#menuIconeFixar {
     position: absolute;
     top: 2%;
-    right: -37px;
+    right: -40px;
+    border-radius: 12px;
+    padding: 3px;
+    cursor: pointer;
 }
 
 nav img#menuIconeFixar:hover {
-    background-color: rgba(255,255,255,.2);
+    background-color: rgba(100,100,100,.3);
+}
+
+nav img#menuIconeFixar.selecionado {
+    background-color: rgba(255,255,255,.3);
 }
 
 
@@ -67,6 +77,7 @@ nav img#menuIconeFixar:hover {
 /* Imagem do Aluno */
 
 div#resumoAluno {
+    background-color: #a52a25;
     padding: 15px;
     text-align: center;
 }
@@ -157,3 +168,8 @@ nav li:active {
 
 
 /* Botão Sair */
+
+nav ul#sair {
+    /* border-top: 10px solid #680d0a; */
+    margin: 0;
+}

@@ -7,6 +7,11 @@ function mostrarDiv(div) {
             aba.style.display = 'inline';
 }
 
+function alternarMenuFixo() {
+    document.querySelector('nav').classList.toggle('fixo')
+    document.getElementById('menuIconeFixar').classList.toggle('selecionado')
+}
+
 function sair() {
     window.onbeforeunload = null
     document.location.reload()

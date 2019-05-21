@@ -48,6 +48,8 @@ function verificarLogin(resposta) {
         document.body.innerHTML = resposta
         
         document.body.style.cursor = 'default'
+
+        mostrarDiv('divPerfil')
     }
 }
 
