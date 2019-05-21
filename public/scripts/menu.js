@@ -1,7 +1,7 @@
 function mostrarDiv(div) {
     let abas = document.getElementById('abas')
-    for (aba in abas.children)
-        if (aba.id !== div)
+    for (let aba of abas.children)
+        if (aba.id !== div) 
             aba.style.display = 'none'
         else
             aba.style.display = 'inline';

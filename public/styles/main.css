@@ -1,5 +1,43 @@
+/* Abas */
+
 div#abas div {
+    border: 2px solid blueviolet;
     display: none;
     height: 100vh;
     margin: 0;
+    left: 42px;
 }
+
+
+
+/* Barra de rolamento personalizada (Chrome) */
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #a7403d3b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #680d0a88;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4e0a08f1;
+}
+
+
+
+/* Ícones */
+
+img.icon {
+    filter: invert(1); /* Preto para branco */
+}
+
+/* SVGs */
+/* path {
+    fill: white;
+} */
