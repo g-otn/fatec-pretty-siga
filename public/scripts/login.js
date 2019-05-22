@@ -47,6 +47,7 @@ function verificarLogin(resposta) {
         // Substitui todo o corpo atual (página de login) pelo o recebido
         document.body.innerHTML = resposta
         
+        document.title = 'Fatec Pretty Siga'
         document.body.style.cursor = 'default'
 
         mostrarAba('abaPerfil')

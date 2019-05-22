@@ -1,4 +1,27 @@
-<h1><%= perfil.name.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %></h1>
+<div> <!-- #abaPerfil div -->
+    <header>
+        <h1><%= perfil.name.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %></h1>
+        <div>
+            <div id="perfilImgAlunoContainer">
+                <img src="<%= perfil.picture %>">
+            </div>
+        </div>
+        <div id="perfilNumeros">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><h1>Progresso</h1></td>
+                        <td><h1><%= perfil.progress %>%</h1></td>
+                    </tr>
+                    <tr>
+                        <td><h1>Rendimento</h1></td>
+                        <td><h1><%= perfil.averageGrade %></h1></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </header>
+</div>
 <pre>
     <%= JSON.stringify(perfil, null, '  ') %>
 </pre>

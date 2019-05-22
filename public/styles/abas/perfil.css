@@ -1,0 +1,87 @@
+#abaPerfil {
+    color: white;
+}
+
+#abaPerfil > div {
+    border-radius: 20px;
+    height: auto;
+}
+
+#abaPerfil pre {
+    color: black;
+    background-color: rgb(200,200,200);
+}
+
+
+
+/* Cabeçalho */
+#abaPerfil header {
+    padding: 20px;
+    background-color: #a52a25;
+}
+
+#abaPerfil header > div {
+    display: inline-block;
+}
+
+
+
+
+/* Título (nome) */
+
+#abaPerfil header > h1 { 
+    text-align: center;
+}
+
+
+
+/* Imagem do Aluno */
+
+#perfilImgAlunoContainer {
+    border: 3px solid #680d0a;
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#perfilImgAlunoContainer img {
+    width: 120px;
+    height: 160px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#perfilImgAlunoContainer:hover {
+    border-radius: 80px;
+    width: 200px;
+    height: 200px;
+}
+
+#perfilImgAlunoContainer:hover img {
+    width: 150px;
+    height: 200px;
+}
+
+
+
+/* Informações */
+
+#perfilNumeros {
+
+}
+
+#perfilNumeros tr td:last-child h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+}

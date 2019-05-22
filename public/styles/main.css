@@ -13,13 +13,13 @@ nav:hover + div#abas, nav.fixo + div#abas { /* Previne div#abas de voltar para a
     margin-left: 252px; /* 210px (nav content) + 42px (nav border-right) */
 }
 
-div#abas div {
+div#abas > div {
     overflow: auto;
     display: none;
     margin: 0;
     width: 100%;
     height: 100vh;
-    padding: 30px;
+    padding: 20px;
 }
 
 
