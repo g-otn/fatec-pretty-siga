@@ -1,10 +1,4 @@
-#header {
-    width: 100%;
-}
-
-
-
-/* Menu (Barra lateral) */
+/* Container do menu */
 
 nav {
     display: flex;
@@ -117,9 +111,8 @@ ul#menu {
     min-width: 100px;
 
     /* Permite dar scroll */
-    overflow: scroll;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     /* Desaparece a barra de scroll */
     -ms-overflow-style: none;
     scrollbar-width: none;

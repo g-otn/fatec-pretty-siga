@@ -1,10 +1,10 @@
-function mostrarDiv(div) {
+function mostrarAba(div) {
     let abas = document.getElementById('abas')
     for (let aba of abas.children)
         if (aba.id !== div) 
             aba.style.display = 'none'
         else
-            aba.style.display = 'inline';
+            aba.style.display = 'block';
 }
 
 function alternarMenuFixo() {

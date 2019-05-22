@@ -49,7 +49,7 @@ function verificarLogin(resposta) {
         
         document.body.style.cursor = 'default'
 
-        mostrarDiv('divPerfil')
+        mostrarAba('abaPerfil')
     }
 }
 
