@@ -8,7 +8,7 @@
     <title>Login - Fatec Pretty SIGA</title>
     <link rel="shortcut icon" href="media/favicon_100x100.png" type="image/x-icon">
     <!-- Estilos -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300|Roboto:400,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300|Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -24,44 +24,47 @@
 </head>
 
 <body>
-    <div id="paginaLogin">
-        <header>
-            <h1>Fatec Pretty SIGA</h1>
-            <p>Visualize suas informações de aluno do SIGA do Centro Paula Souza de uma maneira agradável!</p>
-        </header>
-        <div id="loginContainer">
-            <div id="login">
-                <h2>Login</h2>
-                <form id="login" autocomplete="on" onsubmit="event.preventDefault(); realizarlogin()">
-                    <input type="text" name="usuario" maxlength="20" size="20" autocomplete="username"
-                        placeholder="Usuário" required oninput="this.value = this.value.toUpperCase()">
-                    <br><input type="password" name="senha" maxlength="20" size="20" autocomplete="current-password"
-                        placeholder="Senha" required>
-                    <br><button type="submit">Confirmar</button>
-                </form>
-                <pre id="erroLogin"></pre>
+    <div id="paginaLoginContainer">
+        <div id="paginaLogin">
+            <header>
+                <h1>Fatec Pretty SIGA</h1>
+                <p>Visualize suas informações de aluno do SIGA do Centro Paula Souza de uma maneira agradável!</p>
+            </header>
+            <div id="loginContainer">
+                <div id="login">
+                    <h2>Login</h2>
+                    <form id="login" autocomplete="on" onsubmit="event.preventDefault(); realizarlogin()">
+                        <input type="text" name="usuario" maxlength="20" size="20" autocomplete="username"
+                            placeholder="Usuário" required oninput="this.value = this.value.toUpperCase()">
+                        <br><input type="password" name="senha" maxlength="20" size="20" autocomplete="current-password"
+                            placeholder="Senha" required>
+                        <br><button type="submit">Confirmar</button>
+                    </form>
+                    <pre id="erroLogin"></pre>
+                </div>
             </div>
-        </div>
-        <div id="loginDescricao">
-            <p>
-                O Fatec Pretty SIGA organiza suas informações de aluno no SIGA em um estilo mais agradável</p>
-            <br>
-            <p style="text-align: left; font-size: 0.8em">
-                Esse site foi desenvolvido para funcionar apenas com o SIGA do Centro Paula Souza.
+            <div id="loginDescricao">
+                <p>
+                    O Fatec Pretty SIGA organiza suas informações de aluno no SIGA em um estilo mais agradável. <a
+                        href="info.html">Veja o que é organizado</a>.</p>
                 <br>
-                O login leva em média 3 à 5 segundos. Isso pode dependendo da sua conexão e a do SIGA.
-            </p>
-            <br>
+                <p style="text-align: left; font-size: 0.8em">
+                    Esse site foi desenvolvido para funcionar apenas com o SIGA do Centro Paula Souza.
+                    <br>
+                    O login leva em média 3 à 5 segundos. Isso pode mudar dependendo da sua conexão e a do SIGA.
+                </p>
+                <br>
+            </div>
+            <footer>
+                <p>
+                    <a href="https://github.com/g-otn/fatec-pretty-siga" target="_blank">GitHub</a> |
+                    <a href="https://github.com/g-otn/fatec-pretty-siga/issues" target="_blank">Reporte um erro</a> |
+                    <a href="https://github.com/g-otn/fatec-pretty-siga/pulls" target="_blank">Ajude a desenvolver</a> |
+                    <a href="https://siga.cps.sp.gov.br/aluno/login.aspx">Acesse o SIGA normal</a>
+                    <br>Desenvolvido por Gabriel Otani Pereira - 2019
+                </p>
+            </footer>
         </div>
-        <footer>
-            <p>
-                <a href="https://github.com/g-otn/fatec-pretty-siga" target="_blank">GitHub</a> |
-                <a href="https://github.com/g-otn/fatec-pretty-siga/issues" target="_blank">Reporte um erro</a> |
-                <a href="https://github.com/g-otn/fatec-pretty-siga/pulls" target="_blank">Ajude a desenvolver</a> |
-                <a href="https://siga.cps.sp.gov.br/aluno/login.aspx">Acesse o SIGA normal</a>
-                <br>Desenvolvido por Gabriel Otani Pereira - 2019
-            </p>
-        </footer>
     </div>
 </body>
 
