@@ -1,29 +1,12 @@
-#abaPerfil pre {
-    color: black;
-    background-color: rgb(200,200,200);
-}
-
-
-
 /* Cabeçalho */
 
 #abaPerfil header {
     padding: 20px;
-}
-
-#abaPerfil header > div {
-    display: inline-block;
-}
-
-
-
-
-/* Título (nome) */
-
-#abaPerfil header { 
     text-align: center;
-    /* background-color: #9b2824;
-    color: white; */
+}
+
+#abaPerfil header > * {
+    margin-top: 0;
 }
 
 
