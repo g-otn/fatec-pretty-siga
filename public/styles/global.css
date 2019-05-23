@@ -29,10 +29,15 @@ a:hover {
     color: green;
 }
 
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 
 /* Para teste */
 
-* {
+/* * {
     border: 1px dashed rgb(58, 58, 58);
-}
+} */

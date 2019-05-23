@@ -1,26 +1,57 @@
-<div> <!-- #abaPerfil div -->
-    <header>
-        <h1><%= perfil.name.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %></h1>
-        <div>
-            <div id="perfilImgAlunoContainer">
-                <img src="<%= perfil.picture %>">
-            </div>
-        </div>
-        <div id="perfilNumeros">
-            <table>
-                <tbody>
-                    <tr>
-                        <td><h1>Progresso</h1></td>
-                        <td><h1><%= perfil.progress %>%</h1></td>
-                    </tr>
-                    <tr>
-                        <td><h1>Rendimento</h1></td>
-                        <td><h1><%= perfil.averageGrade %></h1></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </header>
+<header>
+    <h3><%= perfil.unit %></h3>
+    <h1><%= perfil.name.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %></h1>
+    <h4><%= perfil.course %></h4>
+</header>
+<div id="perfilCartao">
+    <table>
+        <tbody>
+            <tr>
+                <td rowspan="2" colspan="2">
+                    <div>
+                        <div id="perfilImgAlunoContainer">
+                            <img src="<%= perfil.picture %>">
+                        </div>
+                    </div>
+                </td>
+                <td><h2>Progresso (PP)</h2></td>
+                <td><h2><%= perfil.progress %>%</h2></td>
+            </tr>
+            <tr>
+                <td><h2>Rendimento (PR)</h2></td>
+                <td><h2><%= perfil.averageGrade %></h2></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="perfilDados">
+    <div class="perfilDadosTabela">
+        <table>
+            <thead>
+                <th colspan="4"><h2>Dados de Aluno</h2></th>
+            </thead>
+            <tbody>
+                <tr><td>Unidade</td><td colspan="3"><%= perfil.unit %></td></tr>
+                <tr><td>Curso</td><td colspan="3"><%= perfil.course %></td></tr>
+                <tr><td>Período</td><td colspan="3"><%= perfil.period %></td></tr>
+                <tr><td>PP</td><td><%= perfil.progress %></td><td>PR</td><td><%= perfil.averageGrade %></td></tr>
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="perfilDadosTabela">
+        <table>
+            <thead>
+                <th colspan="2"><h2>Dados Pessoais</h2></th>
+            </thead>
+            <tbody>
+                <tr><td>Nome</td><td><%= perfil.name.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %></td></tr>
+                <tr><td>RA</td><td><%= perfil.code %></td></tr>
+                <tr><td>CPF</td><td><%= perfil.cpf %></td></tr>
+                <tr><td>Email</td><td><%= perfil.email %></td></tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 <pre>
     <%= JSON.stringify(perfil, null, '  ') %>

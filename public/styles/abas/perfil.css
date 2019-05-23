@@ -1,12 +1,3 @@
-#abaPerfil {
-    color: white;
-}
-
-#abaPerfil > div {
-    border-radius: 20px;
-    height: auto;
-}
-
 #abaPerfil pre {
     color: black;
     background-color: rgb(200,200,200);
@@ -15,9 +6,9 @@
 
 
 /* Cabeçalho */
+
 #abaPerfil header {
     padding: 20px;
-    background-color: #a52a25;
 }
 
 #abaPerfil header > div {
@@ -29,8 +20,10 @@
 
 /* Título (nome) */
 
-#abaPerfil header > h1 { 
+#abaPerfil header { 
     text-align: center;
+    /* background-color: #9b2824;
+    color: white; */
 }
 
 
@@ -38,6 +31,7 @@
 /* Imagem do Aluno */
 
 #perfilImgAlunoContainer {
+    cursor: pointer;
     border: 3px solid #680d0a;
     border-radius: 100px;
     width: 150px;
@@ -75,13 +69,61 @@
 
 
 
-/* Informações */
+/* Cartão Aluno */
 
-#perfilNumeros {
-
+#perfilCartao {
+    width: 100%;
 }
 
-#perfilNumeros tr td:last-child h1 {
+#perfilCartao table {
+    height: 215px;
+    border-spacing: 25px 0;
+    border-radius: 20px;
+    background-color: #9b2824;
+    color: white;
+}
+#perfilCartao tr td:last-child h2 {
     font-family: 'Roboto', sans-serif;
     text-align: right;
+}
+
+
+
+/* Tabelas de Dados */
+
+#perfilDados {
+    text-align: center;
+}
+
+.perfilDadosTabela {
+    display: inline-block;
+    width: 33%;
+    min-width: 250px;
+    vertical-align: top;
+}
+
+.perfilDadosTabela table {
+    width: 100%;
+    border-spacing: 20px 5px;
+}
+
+.perfilDadosTabela td:nth-child(1n) {
+    text-align: left;
+}
+
+.perfilDadosTabela td:nth-child(2n) {
+    text-align: right;
+}
+
+.perfilDadosTabela tr:nth-child(2n) {
+    background-color: #a7403d15;
+}
+
+.perfilDadosTabela tr:nth-child(2n) {
+    text-align: right;
+}
+
+.perfilDadosTabela tbody tr:hover {
+    background-color: #9b2824;
+    color: white;
 }

@@ -139,10 +139,6 @@ div#paginaLogin footer a:hover {
 
 
 /* Página sobre Dados */
-#infoTabela {
-    margin-left:auto; 
-    margin-right:auto;
-}
 
 #infoTabela th {
     font-family: 'Montserrat', sans-serif;
