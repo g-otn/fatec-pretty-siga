@@ -152,6 +152,31 @@ div#paginaLogin footer a:hover {
     width: 1%;
 }
 
+#infoTabela td ul li {
+    text-align: left;
+}
+
 #infoTabela ul {
-    padding: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#infoTabela li ul {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    position:absolute;
+}
+
+#infoTabela li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    position: static;
 }
