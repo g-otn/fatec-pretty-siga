@@ -1,0 +1,27 @@
+#abaNotasParciais {
+    text-align: center;
+}
+
+#abaNotasParciais .disciplina {
+    background-color: #a52a25;
+    color: lightgrey;
+    border-radius: 10px;
+    border: 1px dashed purple;
+    display: inline-block;
+    width: 30%;
+    min-width: 300px;
+    margin: 0 10px 20px;
+    vertical-align: top;
+}
+
+#abaNotasParciais .disciplina p {
+    margin-top: 0;
+}
+
+#abaNotasParciais .disciplina .sigla {
+    color: grey;
+}
+
+#abaNotasParciais pre {
+    text-align: left;
+}

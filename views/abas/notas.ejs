@@ -1,3 +1,12 @@
+<h2><%= (notasParciais[0].discipline.periodId + 1) %>º Período</h2>
+<% notasParciais.forEach(e => { %>
+    <div class="disciplina">
+        <h4><%= e.discipline.name %></h4>
+        <p>
+            <span class="sigla"><%= e.discipline.code %></span>
+        </p>
+    </div>
+<% }) %>
 <pre>
-    <%= JSON.stringify(notasParciais, null, '  ') %>
+    <%= JSON.stringify(notasParciais, null, '        ') %>
 </pre>

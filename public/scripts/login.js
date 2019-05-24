@@ -26,7 +26,7 @@ function realizarlogin() {
 
     // Configura callbacks e realiza a requisição
     req.onload = () => verificarLogin(req.response)
-    req.onerror = () => mostrarErroDeLogin('A conexão com o servidor falhou')
+    req.onerror = () => mostrarErroDeLogin('A conexão com o servidor foi perdida')
     req.open('POST', '/')
     req.setRequestHeader('Content-type', 'application/json')
     req.send(JSON.stringify({ usuario: usuario, senha: senha }))
@@ -50,7 +50,7 @@ function verificarLogin(resposta) {
         document.title = 'Fatec Pretty Siga'
         document.body.style.cursor = 'default'
 
-        mostrarAba('abaPerfil')
+        mostrarAba('abaNotasParciais')
     }
 }
 
