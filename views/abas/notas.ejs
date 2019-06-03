@@ -1,10 +1,25 @@
 <h2><%= (notasParciais[0].discipline.periodId + 1) %>º Período</h2>
 <% notasParciais.forEach(e => { %>
     <div class="disciplina">
-        <h4><%= e.discipline.name %></h4>
-        <p>
-            <span class="sigla"><%= e.discipline.code %></span>
-        </p>
+        <div class="tituloDisciplina">
+            <h4><%= e.discipline.name %></h4>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Média</td>
+                    <td><%= e.discipline.grade %></td>
+                </tr>
+            </thead>
+            <tbody>
+                <% e.evaluations.forEach(notas => { %>
+                    <tr>
+                        <td><%= notas.description %></td>
+                        <td><%= notas.grades[0].score %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
     </div>
 <% }) %>
 <pre>

@@ -4,9 +4,8 @@
 
 #abaNotasParciais .disciplina {
     background-color: #a52a25;
-    color: lightgrey;
+    color: white;
     border-radius: 10px;
-    border: 1px dashed purple;
     display: inline-block;
     width: 30%;
     min-width: 300px;
@@ -14,14 +13,43 @@
     vertical-align: top;
 }
 
-#abaNotasParciais .disciplina p {
-    margin-top: 0;
+#abaNotasParciais .tituloDisciplina {
+    background-color: #680d0a;
+    padding: 20px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-#abaNotasParciais .disciplina .sigla {
-    color: grey;
+#abaNotasParciais .tituloDisciplina h4 {
+    margin: 0;
 }
 
-#abaNotasParciais pre {
+#abaNotasParciais table {
+    width: 100%;
+    margin-bottom: 10px;
+    border-spacing: 0;
+}
+
+#abaNotasParciais thead {
+    font-weight: bold;
+}
+
+#abaNotasParciais td {
+    padding: 5px 15px;
+}
+
+#abaNotasParciais td:nth-child(1n) {
     text-align: left;
+}
+
+#abaNotasParciais td:nth-child(2n) {
+    text-align: right;
+}
+
+#abaNotasParciais tr:nth-child(2n) {
+    text-align: right;
+}
+
+#abaNotasParciais tr:hover {
+    background-color: #680d0a;
 }

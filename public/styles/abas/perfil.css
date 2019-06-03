@@ -87,7 +87,11 @@
 
 .perfilDadosTabela table {
     width: 100%;
-    border-spacing: 20px 5px;
+    border-spacing: 0;
+}
+
+.perfilDadosTabela td {
+    padding: 5px 5px;
 }
 
 .perfilDadosTabela td:nth-child(1n) {
