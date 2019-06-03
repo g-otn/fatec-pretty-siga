@@ -1,0 +1,55 @@
+#abaDisciplinas {
+    text-align: center;
+}
+
+#abaDisciplinas .disciplina {
+    background-color: #a52a25;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    width: 30%;
+    min-width: 300px;
+    margin: 0 10px 20px;
+    vertical-align: top;
+}
+
+#abaDisciplinas .tituloDisciplina {
+    background-color: #680d0a;
+    padding: 20px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#abaDisciplinas .tituloDisciplina h4 {
+    margin: 0;
+}
+
+#abaDisciplinas table {
+    width: 100%;
+    margin-bottom: 10px;
+    border-spacing: 0;
+}
+
+#abaDisciplinas thead {
+    font-weight: bold;
+}
+
+#abaDisciplinas td {
+    padding: 5px 15px;
+}
+
+#abaDisciplinas td:nth-child(1n) {
+    text-align: left;
+}
+
+#abaDisciplinas td:nth-child(2n) {
+    text-align: right;
+}
+
+#abaDisciplinas tr:nth-child(2n) {
+    text-align: right;
+}
+
+#abaDisciplinas tr:hover {
+    background-color: #680d0a;
+}
