@@ -1,9 +1,26 @@
 <h2><%= (notasParciais[0].discipline.periodId + 1) %>º Período</h2>
-<% notasParciais.forEach((e, i) => { %>
+<%
+    function compararNotasParciaisDisciplina(a, b) {
+        if (a.discipline.name < b.discipline.name) 
+            return -1;
+        if (a.discipline.name > b.discipline.name) 
+            return 1; 
+        return 0; 
+    }
+
+    function compararDisciplinasNome(a, b) {
+        if (a.name < b.name) 
+            return -1;
+        if (a.name > b.name) 
+            return 1; 
+        return 0; 
+    }
+%>
+<% notasParciais.sort(compararNotasParciaisDisciplina).forEach((e, i) => { %>
     <div class="disciplina">
         <div class="tituloDisciplina">
             <h4><%= e.discipline.name %></h4>
-            <p><%= disciplinas[i].teacherName.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %></p>
+            <p><%= disciplinas.sort(compararDisciplinasNome)[i].teacherName.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %></p>
         </div>
         <table>
             <thead>

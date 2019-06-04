@@ -50,7 +50,7 @@ function verificarLogin(resposta) {
         document.title = 'Fatec Pretty Siga'
         document.body.style.cursor = 'default'
 
-        mostrarAba('abaNotasParciais')
+        mostrarAba('abaDisciplinas')
     }
 }
 
