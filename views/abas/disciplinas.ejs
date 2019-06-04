@@ -18,10 +18,14 @@
 %>
 <% notasParciais.sort(compararNotasParciaisDisciplina).forEach((e, i) => { %>
     <div class="disciplina">
-        <div class="tituloDisciplina">
+        <div class="cabecalhoDisciplina">
             <h4><%= e.discipline.name %></h4>
             <p><%= disciplinas.sort(compararDisciplinasNome)[i].teacherName.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %></p>
         </div>
+        <table>
+            <thead>
+            </thead>
+        </table>
         <table>
             <thead>
                 <tr>
@@ -41,5 +45,6 @@
     </div>
 <% }) %>
 <pre style="text-align: left">
+    <%= JSON.stringify(disciplinas, null, '        ') %>
     <%= JSON.stringify(notasParciais, null, '        ') %>
 </pre>
