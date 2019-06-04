@@ -140,39 +140,25 @@ div#paginaLogin footer a:hover {
 
 /* Página sobre Dados */
 
-#infoTabela th {
+#infoTabela thead {
     font-family: 'Montserrat', sans-serif;
+}
+
+#infoTabela tbody {
+    text-align: left;
 }
 
 #infoTabela td {
     width: 1%;
-}
-
-#infoTabela td ul li {
-    text-align: left;
-}
-
-#infoTabela ul {
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    vertical-align: top;
 }
 
 #infoTabela li ul {
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
-    position:absolute;
+    list-style: none;
+    padding: 0;
+    font-size: 0.8em;
 }
 
 #infoTabela li:hover ul {
-    opacity: 1;
-    visibility: visible;
-    position: static;
+    display: inline-block;
 }
