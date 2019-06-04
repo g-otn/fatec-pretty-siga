@@ -1,24 +1,28 @@
-<% disciplinas.forEach(disciplina => { %>
+<h2><%= (notasParciais[0].discipline.periodId + 1) %>º Período</h2>
+<% notasParciais.forEach((e, i) => { %>
     <div class="disciplina">
         <div class="tituloDisciplina">
-            <h4><%= disciplina.name %></h4>
+            <h4><%= e.discipline.name %></h4>
+            <p><%= disciplinas[i].teacherName.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %></p>
         </div>
         <table>
             <thead>
                 <tr>
-                    <td>a</td>
-                    <td>a</td>
+                    <td>Média</td>
+                    <td><%= e.discipline.grade %></td>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <% e.evaluations.forEach(notas => { %>
+                    <tr>
+                        <td><%= notas.description %></td>
+                        <td><%= notas.grades[0].score %></td>
+                    </tr>
+                <% }) %>
             </tbody>
         </table>
     </div>
 <% }) %>
-<pre>
-    <%= JSON.stringify(disciplinas, null, '  ') %>
+<pre style="text-align: left">
+    <%= JSON.stringify(notasParciais, null, '        ') %>
 </pre>
