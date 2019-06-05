@@ -1,3 +1,21 @@
+<table id="historico">
+    <thead>
+        <th>Disciplina</th>
+        <th>Frequência</th>
+        <th>Nota</th>
+        <th>Estado</th>
+    </thead>
+    <tbody>
+        <% historico.entries.forEach(e => { %>
+            <tr>
+                <td><%= e.discipline.name %></td>
+                <td><%= e.discipline.frequency %>%</td>
+                <td><%= Number(e.discipline.grade).toFixed(1) %></td>
+                <td><%= e.observation %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
 <pre style="text-align: left">
     <%= JSON.stringify(historico, null, '  ') %>
 </pre>
