@@ -58,3 +58,16 @@ img.icon {
 /* path {
     fill: white;
 } */
+
+
+
+/* Responsivo */
+@media (max-width: 500px) {
+    div#abas {
+        margin-left: 0;
+    }
+
+    nav:hover + div#abas, nav.fixo + div#abas {
+        margin-left: 70vw;
+    }
+}

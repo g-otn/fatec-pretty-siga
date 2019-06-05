@@ -66,6 +66,10 @@ nav img#menuIconeFixar.selecionado {
     background-color: rgba(255,255,255,.3);
 }
 
+nav img#menuIconeHamburguer {
+    display: none;
+}
+
 
 
 /* Imagem do Aluno */
@@ -165,4 +169,42 @@ nav li:active {
 nav ul#sair {
     /* border-top: 10px solid #680d0a; */
     margin: 0;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 500px) {
+    nav {
+        height: 44px;
+        box-shadow: 0 0 10px black;
+        -webkit-transition: left .2s ease;
+        -moz-transition: left .2s ease;
+        -ms-transition: left .2s ease;
+        -o-transition: left .2s ease;
+        transition: left .2s ease;
+    }
+
+    nav:hover {
+        width: 70vw;
+        height: 100vh;
+        border-right-width: 5px;
+    }
+
+    nav img#menuIconeFixar {
+        display: none;
+    }
+
+    nav img#menuIconeSeta {
+        position: absolute;
+        top: 18px;
+        right: -40px;
+        border-radius: 12px;
+        padding: 3px;
+        cursor: pointer;
+    }
+
+    nav:hover img#menuIconeSeta {
+        display: none;
+    }
 }
