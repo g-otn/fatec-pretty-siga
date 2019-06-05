@@ -1,3 +1,59 @@
+<table id="horarios">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Segunda</th>
+            <th>Terça</th>
+            <th>Quarta</th>
+            <th>Quinta</th>
+            <th>Sexta</th>
+            <th>Sábado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <% horarios[0].periods.forEach(p => { %>
+                <td><%= p.discipline.code %></td>
+            <% }); %>
+        </tr>
+        <tr>
+            <td></td>
+            <% horarios[1].periods.forEach(p => { %>
+                <td><%= p.discipline.code %></td>
+            <% }); %>
+        </tr>
+        <tr>
+            <td></td>
+            <% horarios[2].periods.forEach(p => { %>
+                <td><%= p.discipline.code %></td>
+            <% }); %>
+        </tr>
+        <tr>
+            <td></td>
+            <% horarios[3].periods.forEach(p => { %>
+                <td><%= p.discipline.code %></td>
+            <% }); %>
+        </tr>
+        <tr>
+            <td></td>
+            <% horarios[4].periods.forEach(p => { %>
+                <td><%= p.discipline.code %></td>
+            <% }); %>
+        </tr>
+        <tr>
+            <td></td>
+            <% horarios[5].periods.forEach(p => { %>
+                <td><%= p.discipline.code %></td>
+            <% }); %>
+        </tr>
+        <tr>
+            <td colspan="7">
+                <h2 style="margin: 0"><sub>Placeholder, dados incorretos</sub></h2>
+            </td>
+        </tr>
+    </tbody>
+</table>
 <pre style="text-align: left">
     <%= JSON.stringify(horarios, null, '  ') %>
 </pre>

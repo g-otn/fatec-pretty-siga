@@ -41,16 +41,16 @@ async function getDadosAluno(conta) {
 
 function compararNotasParciaisDisciplina(a, b) {
     if (a.discipline.name < b.discipline.name) 
-        return -1;
+        return -1
     if (a.discipline.name > b.discipline.name) 
-        return 1; 
-    return 0; 
+        return 1
+    return 0
 }
 
 function compararDisciplinasNome(a, b) {
     if (a.name < b.name) 
-        return -1;
+        return -1
     if (a.name > b.name) 
-        return 1; 
-    return 0; 
+        return 1
+    return 0
 }
