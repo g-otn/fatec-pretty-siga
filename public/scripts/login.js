@@ -42,7 +42,7 @@ function verificarLogin(resposta) {
         // Se não está em JSON, a reposta é um HTML
 
         // Pede confirmação ao atualizar ou sair da página
-        //window.onbeforeunload = () => { return '' }
+        window.onbeforeunload = () => { return '' }
 
         // Substitui todo o corpo atual (página de login) pelo o recebido
         document.body.innerHTML = resposta
@@ -50,7 +50,7 @@ function verificarLogin(resposta) {
         document.title = 'Fatec Pretty Siga'
         document.body.style.cursor = 'default'
 
-        mostrarAba('abaHorarios')
+        mostrarAba('abaPerfil')
     }
 }
 

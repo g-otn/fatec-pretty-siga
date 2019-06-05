@@ -13,9 +13,9 @@ app.post('/', (req, res) => {
                 res.send({ erro: 'Não foi possível obter os dados do SIGA, a página do SIGA está no ar?'})
             else
                 res.render('main', dadosAluno, (erro, html) => {
-                    if (erro) {
+                    if (erro)
                         res.send({ erro: 'Ocorreu um erro no servidor e não foi possível gerar sua página de aluno' })
-                    } else
+                    else
                         res.send(html)
                 })
         })
