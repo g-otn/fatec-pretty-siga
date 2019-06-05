@@ -29,12 +29,28 @@ async function getDadosAluno(conta) {
     ])
         .then(resposta => {
             dadosAluno.perfil =         resposta[0]
-            dadosAluno.notasParciais =  resposta[1]
-            dadosAluno.disciplinas =    resposta[2]
+            dadosAluno.notasParciais =  resposta[1].sort(compararNotasParciaisDisciplina)
+            dadosAluno.disciplinas =    resposta[2].sort(compararDisciplinasNome)
             dadosAluno.horarios =       resposta[3]
             dadosAluno.historico =      resposta[4]
             dadosAluno.gradeEscolar =   resposta[5]
         })
         .catch(erro => dadosAluno = { erro: erro.toString() })
     return dadosAluno
+}
+
+function compararNotasParciaisDisciplina(a, b) {
+    if (a.discipline.name < b.discipline.name) 
+        return -1;
+    if (a.discipline.name > b.discipline.name) 
+        return 1; 
+    return 0; 
+}
+
+function compararDisciplinasNome(a, b) {
+    if (a.name < b.name) 
+        return -1;
+    if (a.name > b.name) 
+        return 1; 
+    return 0; 
 }
