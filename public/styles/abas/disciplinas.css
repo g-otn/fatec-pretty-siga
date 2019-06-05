@@ -24,10 +24,6 @@
     margin: 0;
 }
 
-#abaDisciplinas .cabecalhoDisciplina p {
-    margin-bottom: 0;
-}
-
 #abaDisciplinas table {
     background-color: #a52a25;
     width: 100%;
@@ -57,4 +53,8 @@
 
 #abaDisciplinas tr:hover {
     background-color: #680d0a;
+}
+
+#abaDisciplinas .frequencia td {
+    width: 25%;
 }

@@ -5,13 +5,13 @@
             <h4><%= e.discipline.name %></h4>
             <p><%= disciplinas[i].teacherName.replace(/(\B)[^ ]*/g, c => c.toLowerCase()) %></p>
         </div>
-        <table>
+        <table class="frequencia">
             <tbody>
                 <tr>
                     <td>Presenças</td>
-                    <td><%= %></td>
+                    <td><%= disciplinas[i].presences %></td>
                     <td>Faltas</td>
-                    <td></td>
+                    <td><%= disciplinas[i].absenses %></td>
                 </tr>
             </tbody>
         </table>
@@ -26,7 +26,7 @@
                 <% e.evaluations.forEach(notas => { %>
                     <tr>
                         <td><%= notas.description %></td>
-                        <td><%= notas.grades[0].score %></td>
+                        <td><%= Number(notas.grades[0].score).toFixed(1) %></td>
                     </tr>
                 <% }) %>
             </tbody>
