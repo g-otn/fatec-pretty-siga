@@ -14,16 +14,16 @@ Após receber as credenciais do estudante, o servidor os envia para a API,
 que retorna as informações do estudante.
 A informação é então renderizada em um modelo EJS, e o documento HTML renderizado é enviado ao estudante.*
 
+## Built With (*Construído Com*)
+Node.js:
+- Express.js
+- ejs
+- fatec-api
+
+See [Dependencies](https://github.com/g-otn/fatec-pretty-siga/network/dependencies). *Veja as [dependências](https://github.com/g-otn/fatec-pretty-siga/network/dependencies).*
+
 ## Contributing (*Contribuindo*)
-You are free to contribute to this project by pull requests or contacting me for suggestions.
+Pull requests are welcome. *Pull requests são bem vindos.*
 
-*Você é livre para contribuir a esse projeto através de pull requests ou me contatando para sugestões.*
-## Prerequisites (*Pré-requisitos*)
-With Node.js installed, you will to install the project's 
-[dependencies](https://github.com/g-otn/fatec-pretty-siga/network/dependencies): express, ejs and fatec-api.
-
-*Com o Node.js instalado, você precisa instalar as 
-[dependências](https://github.com/g-otn/fatec-pretty-siga/network/dependencies) do projeto: express, ejs e fatec-api.*
-```
-npm i -S express ejs fatec-api
-```
+## License (*Licença*)
+[BSD 2-Clause "Simplified" License](https://github.com/g-otn/fatec-pretty-siga/blob/master/LICENSE)
