@@ -9,10 +9,11 @@ app.post('/', (req, res) => {
         .then(dadosAluno => {
             if (dadosAluno.erro !== undefined)
                 res.send(dadosAluno)
+            else if (Object.keys(dadosAluno).length == 0) // dadosAluno: {}
+                res.send({ erro: 'Não foi possível obter os dados do SIGA, a página do SIGA está no ar?'})
             else
                 res.render('main', dadosAluno, (erro, html) => {
                     if (erro) {
-                        console.log(erro)
                         res.send({ erro: 'Ocorreu um erro no servidor e não foi possível gerar sua página de aluno' })
                     } else
                         res.send(html)

@@ -3,7 +3,7 @@
 }
 
 #abaDisciplinas .disciplina {
-    background-color: #a52a25;
+    background-color: #680d0a;
     color: white;
     border-radius: 10px;
     display: inline-block;
@@ -14,8 +14,8 @@
 }
 
 #abaDisciplinas .cabecalhoDisciplina {
-    background-color: #680d0a;
-    padding: 20px 0;
+    padding: 20px 0 5px;
+    margin-bottom: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -29,6 +29,7 @@
 }
 
 #abaDisciplinas table {
+    background-color: #a52a25;
     width: 100%;
     margin-bottom: 10px;
     border-spacing: 0;
