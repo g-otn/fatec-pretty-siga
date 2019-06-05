@@ -189,6 +189,7 @@ nav ul#sair {
         width: 70vw;
         height: 100vh;
         border-right-width: 5px;
+        box-shadow: none;
     }
 
     nav img#menuIconeFixar {
@@ -206,5 +207,13 @@ nav ul#sair {
 
     nav:hover img#menuIconeSeta {
         display: none;
+    }
+
+    nav.fixo {
+        left: -210px;
+    }
+
+    nav.fixo:hover {
+        left: 0;
     }
 }
