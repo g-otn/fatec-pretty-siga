@@ -1,6 +1,6 @@
 {
   "name": "fatec-pretty-siga",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Serves website with student's information from Centro Paula Souza's SIGA",
   "keywords": [
     "fatec",
